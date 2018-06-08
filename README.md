@@ -27,13 +27,13 @@
 1. join
 	- user_transaction.id와 menu.transaction_id 가 같은 것끼리 묶어주는 join을 해봐라
 	
-| id | sender_address | receiver_address | amount | id | transaction_id | name              | price |
-----|----------------|------------------|--------|----|----------------|-------------------|-------|
-|  0 | 0x123          | 0xabc            |  13500 |  0 |              0 | meat noodle       |  6000 |
-|  0 | 0x123          | 0xabc            |  13500 |  1 |              0 | spicy meat noodle |  7500 |
-|  1 | 0x456          | 0xefg            |  75000 |  2 |              1 | spicy meat noodle |  7500 |
-|  2 | 0x789          | 0xktkgg          |  12000 |  3 |              2 | meat noodle       |  6000 |
-|  2 | 0x789          | 0xktkgg          |  12000 |  4 |              2 | spicy meat noodle |  6000 |
+	| id | sender_address | receiver_address | amount | id | transaction_id | name              | price |
+	----|----------------|------------------|--------|----|----------------|-------------------|-------|
+	|  0 | 0x123          | 0xabc            |  13500 |  0 |              0 | meat noodle       |  6000 |
+	|  0 | 0x123          | 0xabc            |  13500 |  1 |              0 | spicy meat noodle |  7500 |
+	|  1 | 0x456          | 0xefg            |  75000 |  2 |              1 | spicy meat noodle |  7500 |
+	|  2 | 0x789          | 0xktkgg          |  12000 |  3 |              2 | meat noodle       |  6000 |
+	|  2 | 0x789          | 0xktkgg          |  12000 |  4 |              2 | spicy meat noodle |  6000 |
 
 1. delete
     - 본인 이름의 레코드를 삭제하기
