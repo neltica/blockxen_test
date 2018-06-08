@@ -66,13 +66,13 @@ function login($name,$email,$access_token,$expires_in)
 	$query="select * from users where email='".$email."';";
 	echo $query;
 	$result=send_query($query);
-	//로그인 시도
+	
 	if($result->num_rows!=0)
 	{
 		$query="update users set access_token='".$access_token."',access_token_expire_date=".$expires_in." where email='".$email."';";
-		//echo $query;
+		
 		$result=send_query($query);
-		//echo "naver_login result:".$result."<br>";
+		
 		$_SESSION["access_token"]=$access_token;
 		$_SESSION["name"]=$name;
 		$_SESSION["email"]=$email;
@@ -84,34 +84,33 @@ function login($name,$email,$access_token,$expires_in)
 		}
 		else
 		{
-			//echo "query true<br>\n";
+			echo "query true<br>\n";
 
 			return true;
 		}
 	}
 
-	//회원가입시도
+	
 	else
 	{
-		//btc address 생성
+	
 		echo "btc address create<br>\n";
 		$btc_address=create_btc_address();
 		echo "btc_address: ".$btc_address."<br>\n";
-		//bch address 생성
+	
 
 		echo "bch address create<br>\n";
 		$bch_address=create_bch_address("hello3");
 		echo "bch_address: ".$bch_address."<br>\n";
-		//etc address 생성
+	
 
 		echo "etc address create<br>\n";
 		$etc_address=create_etc_address("123");
-		//echo "etc_address: ".$etc_address."<br>\n";
-		//eth address 생성
+	
 
 		echo "eth address create<br>\n";
 		$eth_address=create_eth_address("123");
-		//echo "eth_address: ".$eth_address."<br>\n";
+	
 
 		echo "xrp address create<br>\n";
 		$xrp_address=create_xrp_address("123");
@@ -139,7 +138,7 @@ function login($name,$email,$access_token,$expires_in)
 
 	}
 }
-``` 
+```
 1. post get 차이점
     - get은 url에 합쳐서 보내고 post는 body에 담아서 보낸다. 설명하면 ok
     - header에 content-type이라는 헤더필드에 데이터 타입이 명시된다까지 알면 가산점
